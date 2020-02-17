@@ -39,19 +39,16 @@ Docker-LNMP
 ### 准备
 ```shell
 # 安装docker和docker-compose
-yum -y install epel-release 
-yum -y install docker docker-compose
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun 
+curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 
 # 启动docker服务
 service docker start
 
 # 配置阿里云docker镜像加速器(建议配置加速器, 可以提升docker拉取镜像的速度)
-mkdir -p /etc/docker
-vim /etc/docker/daemon.json
-# 新增下面内容
-{
-    "registry-mirrors": ["https://8auvmfwy.mirror.aliyuncs.com"]
-}
+[阿里云ECS安装docker-ce_docker,阿里云_SimonLiu的博客-CSDN博客](https://blog.csdn.net/toopoo/article/details/104354260)
+
 # 重新加载配置、重启docker
 systemctl daemon-reload 
 systemctl restart docker 
