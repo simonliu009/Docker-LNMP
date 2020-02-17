@@ -49,7 +49,7 @@ service docker start
 ### 配置阿里云docker镜像加速器(建议配置加速器, 可以提升docker拉取镜像的速度)
 [阿里云ECS安装docker-ce_docker,阿里云_SimonLiu的博客-CSDN博客](https://blog.csdn.net/toopoo/article/details/104354260)
 
-``shell
+```shell
 # 重新加载配置、重启docker
 systemctl daemon-reload 
 systemctl restart docker 
