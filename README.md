@@ -81,6 +81,10 @@ Creating proxy ...
 访问IP, 效果图如下    
 ![效果图](https://raw.githubusercontent.com/duiying/img/master/docker-lnmp.png)
 
+访问phpMyadmin：
+安全组打开8080端口，访问主站首页8080端口就会重定向到phpMyadmin，默认账号是root/root
+不需要使用的时候，随时禁止访问8080端口。
+
 ### 学习文档
 - [如何新建一个站点](docs/如何新建一个站点.md)
 - [如何安装yaf扩展](docs/如何安装yaf扩展.md)
